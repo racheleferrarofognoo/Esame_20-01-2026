@@ -1,8 +1,9 @@
-import matplotlib.pyplot as plt
 import networkx as nx
 from model.model import Model
-
+from database import dao
 my_model = Model()
+my_dao = dao.DAO()
+print(my_dao.get_connessioni())
 
 # DE-COMMENTARE E ADATTARE I NOMI DELLE FUNZIONI
 # A QUELLE EFFETTIVAMENTE SCRITTE DURANTE L'ESAME

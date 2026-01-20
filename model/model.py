@@ -6,14 +6,25 @@ class Model:
         self._graph = nx.Graph()
         self._artists_list = []
         self.load_all_artists()
+        self.dao = DAO()
+        self.id_map = {}
 
     def load_all_artists(self):
         self._artists_list = DAO.get_all_artists()
-        print(f"Artisti: {self._artists_list}")
-
-    def load_artists_with_min_albums(self, min_albums):
-        pass
+        return self._artists_list
 
     def build_graph(self):
-        pass
+        artisti = self.load_all_artists()
+
+
+        artisti_id = []
+
+        for artista in artisti:
+            artisti_id.append(artista.id)
+
+
+
+
+
+
 
